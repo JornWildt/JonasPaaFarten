@@ -22,8 +22,6 @@ namespace Jonas
 
     static void Main(string[] args)
     {
-      Console.WriteLine(Facebook.Implementation.Utility.PageAccessToken);
-
       log4net.Config.XmlConfigurator.Configure();
       Container.Register(Component.For<IFacebookMessenger>().ImplementedBy<FacebookMessengerStub>().LifestyleSingleton());
       ApplicationStarter.Start(Container);
