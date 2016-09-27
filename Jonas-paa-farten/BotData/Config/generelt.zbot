@@ -1,0 +1,44 @@
+﻿> *
+! weight 0.5
+: Jamen, så okay
+: Nåh?
+: Tjah
+: Hvis du siger det, så okay
+: Kan du uddybe det?
+: Hmmm?
+
+> tak
+: Velbekomme
+: Selv tak
+: Var så lidt
+: Okay
+: Yep
+
+> %farvel
+: Ses
+: ILM
+: Ligemåde
+
+> Jeg %elsker dig %bot?
+: :-)
+: Tak
+
+> Jeg %hader dig %bot?
+: << idiot >>
+
+> %idiot
+: Jamen, hvorfor dog det?
+: Er du da vred på mig?
+: Er du vred?
+: Hvis du er frustreret over mig, så prøv at holde en pause.
+: Tag en kop kamilete - det hjælper nok ;-)
+: :-(
+
+> Elsker du også? mig
+: Øh, det tror jeg ikke
+: Nææh
+: Nej, ikke rigtigt
+: Så godt kender vi vist ikke hinanden
+
+> Fnis
+: :-)

@@ -1,0 +1,48 @@
+﻿> kender du %ENTITY
+! call RDF.Query("
+SELECT ?name
+WHERE
+{
+  ?thing rdfs:label ?name .
+  FILTER (lcase(str(?name)) = lcase(str(@1)))
+}
+LIMIT 1
+")
+: Ja
+{empty}: Næh
+{empty}: Næh, gør du?
+
+
+> hved du hvad %ENTITY er
+: << kender du <1> >>
+
+> T
+: << beskriv københavn >>
+
+> beskriv %ENTITY
+! call RDF.Query("
+SELECT ?name ?pred ?predname ?comment
+WHERE
+{
+  ?thing rdfs:label ?name .
+  ?thing ?pred ?comment .
+  ?pred rdfs:label ?predname.
+  FILTER (lcase(str(?name)) = lcase(str(@1)))
+}
+LIMIT 10
+")
+: <result:{r | <if(r.comment)><r.predname>: <r.comment><else>Hmmm ... der er ikke så meget at sige om <r.name>.<endif>\
+ }>
+{empty}: Det kender jeg desværre ikke
+
+> kan du beskrive %ENTITY (for mig)?
+: << beskriv <1> >>
+
+> fortæl mig? (mere|noget)? om %ENTITY
+: << beskriv <3> >>
+
+> hvad (ved du)|(kan du %sige) om %ENTITY
+: << beskriv <3> >>
+
+> hvad er %ENTITY
+: << beskriv <1> >>

@@ -1,0 +1,15 @@
+﻿@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix zb: <http://zimmerbot/terms/>.
+
+<http://sws.geonames.org/2618425/> 
+  rdfs:comment "København er en dejlig storby med lav bebyggelse, grønne område og en hyggelig gammel bykerne.";
+  zb:attraction <http://zbentity/lille_havfrue>;
+  zb:attraction <http://zbentity/rundetaarn>.
+
+<http://zbentity/lille_havfrue>
+  rdfs:label "Den lille havfrue".
+
+<http://zbentity/rundetaarn>
+  rdfs:label "Rundetårn".

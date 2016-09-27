@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+ConnectionStrings.config
+TestResult.xml
+*.VisualState.xml
+UNUSED*
+UNUSED*/
+Logs/
+packages/
+.nuget/

@@ -1,0 +1,7 @@
+﻿
+Common predicates
+  rdfs:label
+  rdfs:comment
+
+ZBot predicates (http://zimmerbot/terms/)
+  zb:attraction 

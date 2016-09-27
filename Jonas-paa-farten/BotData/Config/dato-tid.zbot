@@ -1,0 +1,32 @@
+﻿### Various rules for understanding dates and time
+
+! concept ugedag = mandag, tirsdag, onsdag, torsdag, fredag, lørdag, søndag
+! concept måned = januar, februar, marts, april, maj, juni, juli, august, september, oktober, november, december
+
+> er det (%ugedag) ((i dag)|idag)?
+! call DateTime.IsItWeekDay($1)
+: <if(answer)>Yep!<else>Næh, desværre.<endif>
+: <if(answer)>Ja<else>Nix<endif>
+: <if(answer)>Yep<else>Nej<endif>
+
+> hvilken dag er det *
+! call DateTime.Time()
+: Det er <answer; format="dddd">.
+
+> er det (%måned)
+! call DateTime.IsItMonth($1)
+: <if(answer)>Ja, det er <answer>.<else>Næh, desværre.<endif>
+
+> hvilken måned er det *
+! call DateTime.Time()
+: Det er <answer; format="MMMM">.
+
+> hvad er klokken
+! call DateTime.Time()
+: Klokken er <answer; format="time:short">.
+
+> hvilken dato er det
+! call DateTime.Time()
+: Ifølge mit indre ur burde det være <answer; format="D">.
+: Tjah, <answer; format="D">.
+
