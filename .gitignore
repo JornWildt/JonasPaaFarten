@@ -1,5 +1,6 @@
 bin/
 obj/
+Jonas-paa-farten/BotData/DB/
 .vs/
 *.user
 *.suo

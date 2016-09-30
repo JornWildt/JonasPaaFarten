@@ -13,7 +13,10 @@ namespace MessageGateway.MessageHandlers
 
     public async Task Handle(SendMessageCommand cmd)
     {
-      Logger.Debug("Got message");
+      Logger.DebugFormat("Got message {0}, {1}", FacebookMessenger, cmd);
+      //object x = ApplicationStarter.Container.Resolve<IFacebookMessenger>();
+      //Logger.DebugFormat("Resolved FBM: {0}", x);
+
       FacebookMessenger.Send(cmd.ReciverId, cmd.Text);
     }
   }

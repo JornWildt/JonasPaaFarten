@@ -6,3 +6,10 @@
 ! rdf_prefix zb "http://zimmerbot/terms/"
 
 ! rdf_import "typer.ttl"
+
+!rdf_entities("
+SELECT ?label
+WHERE
+{
+  ?thing rdfs:label ?label .
+}")

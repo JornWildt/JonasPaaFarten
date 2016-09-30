@@ -30,9 +30,11 @@ namespace Jonas_paa_farten
       BundleConfig.RegisterBundles(BundleTable.Bundles);
 
       AppSettings.MapServerPath = (s) => Server.MapPath(s);
+      Container.Register(Component.For<IFacebookMessenger>().ImplementedBy<FacebookMessenger>().LifestyleSingleton());
 
       MessageGateway.ApplicationStarter.Start(Container);
-      Container.Register(Component.For<IFacebookMessenger>().ImplementedBy<FacebookMessenger>().LifestyleSingleton());
+
+      //MessageGateway.ApplicationStarter.Send(new SendMessageCommand { ReciverId = "A", Text = "B" });
     }
   }
 }

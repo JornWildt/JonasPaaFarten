@@ -5,11 +5,14 @@
 
 <http://sws.geonames.org/2618425/> 
   rdfs:comment "København er en dejlig storby med lav bebyggelse, grønne område og en hyggelig gammel bykerne.";
+  rdfs:comment "København er hovedstaden i Danmark.";
   zb:attraction <http://zbentity/lille_havfrue>;
   zb:attraction <http://zbentity/rundetaarn>.
 
 <http://zbentity/lille_havfrue>
-  rdfs:label "Den lille havfrue".
+  rdfs:label "Den lille havfrue";
+  rdfs:comment "Den lille havfrue er en verdenskendt turistattraktion, der forestille den lille havfrue fra H.C. Andersens historier.".
 
 <http://zbentity/rundetaarn>
-  rdfs:label "Rundetårn".
+  rdfs:label "Rundetårn";
+  rdfs:comment "Rundetårn er et af Danmarks mest kendte bygningsværker. Det blev bygget i 1600-tallet af Christian d. 4. Tårnet er en del af Trinitatis Komplekset i det centrale København.".

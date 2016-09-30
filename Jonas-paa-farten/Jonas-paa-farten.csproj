@@ -197,6 +197,7 @@
     <Content Include="BotData\Facts\københavn.ttl" />
     <Content Include="BotData\Facts\typer.ttl" />
     <Content Include="BotData\Facts\lande.ttl" />
+    <Content Include="ConnectionStrings.config" />
     <None Include="Properties\PublishProfiles\jonas-paa-farten.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -21,17 +21,19 @@ LIMIT 1
 
 > beskriv %ENTITY
 ! call RDF.Query("
-SELECT ?name ?pred ?predname ?comment
+SELECT ?name ?pred ?predname ?comment ?comment2
 WHERE
 {
   ?thing rdfs:label ?name .
   ?thing ?pred ?comment .
   ?pred rdfs:label ?predname.
+  OPTIONAL { ?comment rdfs:label ?comment2 }
   FILTER (lcase(str(?name)) = lcase(str(@1)))
 }
-LIMIT 10
+ORDER BY RAND()
+LIMIT 2
 ")
-: <result:{r | <if(r.comment)><r.predname>: <r.comment><else>Hmmm ... der er ikke så meget at sige om <r.name>.<endif>\
+: <result:{r | <if(r.comment)><r.predname>: <if(r.comment2)><r.comment2><else><r.comment><endif><else>Hmmm ... der er ikke så meget at sige om <r.name>.<endif>\
  }>
 {empty}: Det kender jeg desværre ikke
 
@@ -39,7 +41,7 @@ LIMIT 10
 : << beskriv <1> >>
 
 > fortæl mig? (mere|noget)? om %ENTITY
-: << beskriv <3> >>
+: << beskriv <2> >>
 
 > hvad (ved du)|(kan du %sige) om %ENTITY
 : << beskriv <3> >>

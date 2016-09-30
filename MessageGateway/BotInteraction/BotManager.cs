@@ -35,6 +35,7 @@ namespace MessageGateway.BotInteraction
         KnowledgeBase = new KnowledgeBase();
         KnowledgeBase.Initialize(initMode);
         KnowledgeBase.LoadFromFiles(configDirectory);
+        KnowledgeBase.Run();
         Bot = new Bot(KnowledgeBase);
 
         BotHandle = Bot.Run(new ZimmerBotEnvironment());
